@@ -1,0 +1,2 @@
+script=res/jquery/js/jquery.spacegallery.js
+components=jQuery,Core,Easing

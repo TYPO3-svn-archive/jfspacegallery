@@ -1,0 +1,51 @@
+plugin.tx_jfspacegallery_pi1 {
+
+	linkTarget = {$plugin.tx_jfspacegallery_pi1.linkTarget}
+	extlinkTarget = {$plugin.tx_jfspacegallery_pi1.extlinkTarget}
+	jQueryNoConflict = {$plugin.tx_jfspacegallery_pi1.jQueryNoConflict}
+	jsInFooter = {$plugin.tx_jfspacegallery_pi1.jsInFooter}
+	jsMinify = {$plugin.tx_jfspacegallery_pi1.jsMinify}
+
+	jQueryLibrary = {$plugin.tx_jfspacegallery_pi1.file.jQueryLibrary}
+	jQueryEasing = {$plugin.tx_jfspacegallery_pi1.file.jQueryEasing}
+	jQueryCycle = {$plugin.tx_jfspacegallery_pi1.file.jQueryCycle}
+	templateFileJS = {$plugin.tx_jfspacegallery_pi1.file.templateFileJS}
+	cssFile = {$plugin.tx_jfspacegallery_pi1.file.cssFile}
+
+	imagewidth = {$plugin.tx_jfspacegallery_pi1.imagewidth}
+	imageheight = {$plugin.tx_jfspacegallery_pi1.imageheight}
+
+	border = {$plugin.tx_jfspacegallery_pi1.border}
+	duration = {$plugin.tx_jfspacegallery_pi1.duration}
+	perspective = {$plugin.tx_jfspacegallery_pi1.perspective}
+	minScale = {$plugin.tx_jfspacegallery_pi1.minScale}
+	loadingClass = {$plugin.tx_jfspacegallery_pi1.loadingClass}
+
+	damCaptionFields = {$plugin.tx_jfspacegallery_pi1.damCaptionFields}
+	damHrefFields = {$plugin.tx_jfspacegallery_pi1.damHrefFields}
+
+	cycle {
+		normal {
+			image {
+				file.import.data = register:file
+				file.width.data = register:imagewidth
+				file.height.data = register:imageheight
+				altText {
+					data = register:caption
+					stripHtml = 1
+				}
+				titleText < .altText
+				longdescURL < .altText
+			}
+			stdWrap {
+				dataWrap = <div id="{register:key}" class="spacegallery"> | </div>
+				required = 1
+			}
+		}
+		header < .normal
+		content < .normal
+	}
+	_CSS_DEFAULT_STYLE (
+	)
+}
+

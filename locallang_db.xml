@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'jfspacegallery'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_dam.tx_jfdam_link">Link</label>
+			<label index="tt_content.list_type_pi1">Spacegallery</label>
+			<label index="tt_content.pi_flexform.sheet_settings">Settings</label>
+			<label index="tt_content.pi_flexform.imagewidth">Width</label>
+			<label index="tt_content.pi_flexform.imageheight">Height</label>
+			<label index="tt_content.pi_flexform.border">Images' border</label>
+			<label index="tt_content.pi_flexform.duration">Animation duration in ms</label>
+			<label index="tt_content.pi_flexform.perspective">Perpective height</label>
+			<label index="tt_content.pi_flexform.minScale">Minimum scale for the image in the back</label>
+			<label index="tt_content.pi_flexform.loadingClass">CSS class for looading images</label>
+			<label index="tt_content.pi_flexform.sheet_special">Special</label>
+			<label index="tt_content.pi_flexform.options">Enter own options (see http://malsup.com/jquery/cycle/)</label>
+		</languageKey>
+	</data>
+	<orig_hash type="array">
+	</orig_hash>
+	<orig_text type="array">
+	</orig_text>
+</T3locallang>

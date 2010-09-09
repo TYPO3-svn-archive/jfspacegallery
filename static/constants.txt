@@ -26,7 +26,7 @@ plugin.tx_jfspacegallery_pi1 {
 	file.jQueryCycle = EXT:jfspacegallery/res/jquery/js/jquery.spacegallery.js
 
 	# cat=plugin.tx_jfspacegallery.basic/file/040; type=file[js]; label=JS-Template file: Location of the used template for JS
-	file.templateFileJS = EXT:jfspacegallery/pi1/tx_jfspacegallery_pi1.js
+	file.templateFileJS = EXT:jfspacegallery/res/tx_jfspacegallery_pi1.js
 
 	# cat=plugin.tx_jfspacegallery.basic/file/050; type=file[css]; label=CSS file: The Path to the stylesheet file
 	file.cssFile = EXT:jfspacegallery/res/css/style.css

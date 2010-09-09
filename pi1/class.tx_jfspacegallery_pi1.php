@@ -197,7 +197,7 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 
 		// The template for JS
 		if (! $this->templateFileJS = $this->cObj->fileResource($this->conf['templateFileJS'])) {
-			$this->templateFileJS = $this->cObj->fileResource("EXT:jfspacegallery/pi1/tx_jfspacegallery_pi1.js");
+			$this->templateFileJS = $this->cObj->fileResource("EXT:jfspacegallery/res/tx_jfspacegallery_pi1.js");
 		}
 		// get the Template of the Javascript
 		if (! $templateCode = trim($this->cObj->getSubpart($this->templateFileJS, "###TEMPLATE_JS###"))) {

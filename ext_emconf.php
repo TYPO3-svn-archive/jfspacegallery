@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "jfspacegallery".
 #
-# Auto generated 06-09-2010 23:25
+# Auto generated 09-09-2010 22:59
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -29,7 +29,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 1,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '0.0.1',
+	'version' => '0.0.2',
 	'constraints' => array(
 		'depends' => array(
 			'cms' => '',
@@ -42,7 +42,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:21:{s:12:"ext_icon.gif";s:4:"d070";s:17:"ext_localconf.php";s:4:"d320";s:14:"ext_tables.php";s:4:"e2e1";s:15:"flexform_ds.xml";s:4:"78a0";s:13:"locallang.xml";s:4:"8b48";s:16:"locallang_db.xml";s:4:"9a88";s:12:"t3jquery.txt";s:4:"4bc6";s:42:"lib/class.tx_jfspacegallery_cms_layout.php";s:4:"6012";s:14:"pi1/ce_wiz.gif";s:4:"2d0e";s:35:"pi1/class.tx_jfspacegallery_pi1.php";s:4:"409f";s:43:"pi1/class.tx_jfspacegallery_pi1_wizicon.php";s:4:"bf9f";s:17:"pi1/locallang.xml";s:4:"e8a5";s:28:"pi1/tx_jfspacegallery_pi1.js";s:4:"bf01";s:17:"res/css/style.css";s:4:"452f";s:22:"res/img/ajax_small.gif";s:4:"c02b";s:17:"res/img/blank.gif";s:4:"5639";s:33:"res/jquery/js/jquery-1.4.2.min.js";s:4:"1009";s:34:"res/jquery/js/jquery.easing-1.3.js";s:4:"6516";s:36:"res/jquery/js/jquery.spacegallery.js";s:4:"cb77";s:20:"static/constants.txt";s:4:"fa16";s:16:"static/setup.txt";s:4:"6dba";}',
+	'_md5_values_when_last_written' => 'a:21:{s:12:"ext_icon.gif";s:4:"d070";s:17:"ext_localconf.php";s:4:"d320";s:14:"ext_tables.php";s:4:"e2e1";s:15:"flexform_ds.xml";s:4:"78a0";s:13:"locallang.xml";s:4:"8b48";s:16:"locallang_db.xml";s:4:"9a88";s:12:"t3jquery.txt";s:4:"4bc6";s:42:"lib/class.tx_jfspacegallery_cms_layout.php";s:4:"6012";s:14:"pi1/ce_wiz.gif";s:4:"2d0e";s:35:"pi1/class.tx_jfspacegallery_pi1.php";s:4:"332b";s:43:"pi1/class.tx_jfspacegallery_pi1_wizicon.php";s:4:"bf9f";s:17:"pi1/locallang.xml";s:4:"e8a5";s:28:"res/tx_jfspacegallery_pi1.js";s:4:"bf01";s:17:"res/css/style.css";s:4:"452f";s:22:"res/img/ajax_small.gif";s:4:"c02b";s:17:"res/img/blank.gif";s:4:"5639";s:33:"res/jquery/js/jquery-1.4.2.min.js";s:4:"1009";s:34:"res/jquery/js/jquery.easing-1.3.js";s:4:"6516";s:36:"res/jquery/js/jquery.spacegallery.js";s:4:"cb77";s:20:"static/constants.txt";s:4:"b232";s:16:"static/setup.txt";s:4:"6dba";}',
 	'suggests' => array(
 	),
 );

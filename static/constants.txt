@@ -16,6 +16,7 @@ plugin.tx_jfspacegallery_pi1 {
 	jsMinify = 0
 
 
+
 	# cat=plugin.tx_jfspacegallery.basic/file/010; type=file[js]; label=jQuery Library: Location of the jQuery Lib
 	file.jQueryLibrary = EXT:jfspacegallery/res/jquery/js/jquery-1.4.2.min.js
 
@@ -32,6 +33,7 @@ plugin.tx_jfspacegallery_pi1 {
 	file.cssFile = EXT:jfspacegallery/res/css/style.css
 
 
+
 	# cat=plugin.tx_jfspacegallery.basic/dims/010; type=string; label=Image width: Width of the images
 	imagewidth = 480m
 
@@ -43,7 +45,7 @@ plugin.tx_jfspacegallery_pi1 {
 	# cat=plugin.tx_jfspacegallery.basic/dims/030; type=int; label=Images' border: Default 0
 	border = 0
 
-	# cat=plugin.tx_jfspacegallery.basic/dims/040; type=int; label=Animation duration: Default 800
+	# cat=plugin.tx_jfspacegallery.basic/dims/040; type=int; label=Animation duration in ms: Default 800
 	duration = 800
 
 	# cat=plugin.tx_jfspacegallery.basic/dims/050; type=int; label=Perpective height: Default 140
@@ -57,15 +59,12 @@ plugin.tx_jfspacegallery_pi1 {
 
 
 
-	# cat=plugin.tx_jfspacegallery.basic/typo/100; type=string; label=Own Options: Enter own options (see http://malsup.com/jquery/cycle/)
+	# cat=plugin.tx_jfspacegallery.basic/typo/100; type=string; label=Own Options: Enter own options (see http://www.eyecon.ro/spacegallery/#implement)
 	options = 
 
 
 
 	# cat=plugin.tx_jfspacegallery.dam/basic/010; type=string; label=DAM caption fields: Comma separated string with tx_dam fields for caption fields
 	damCaptionFields = caption,description,title
-
-	# cat=plugin.tx_jfspacegallery.dam/basic/020; type=string; label=DAM href fields: Comma separated string with tx_dam fields for href fields
-	damHrefFields = tx_jfdam_link
 }
 

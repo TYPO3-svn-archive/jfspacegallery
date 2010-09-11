@@ -17,7 +17,7 @@
 			<label index="tt_content.pi_flexform.minScale">Minimum scale for the image in the back</label>
 			<label index="tt_content.pi_flexform.loadingClass">CSS class for looading images</label>
 			<label index="tt_content.pi_flexform.sheet_special">Special</label>
-			<label index="tt_content.pi_flexform.options">Enter own options (see http://malsup.com/jquery/cycle/)</label>
+			<label index="tt_content.pi_flexform.options">Enter own options (see http://www.eyecon.ro/spacegallery/#implement)</label>
 		</languageKey>
 	</data>
 	<orig_hash type="array">

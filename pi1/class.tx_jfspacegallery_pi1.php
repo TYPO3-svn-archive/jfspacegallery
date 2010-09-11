@@ -38,10 +38,10 @@ require_once(t3lib_extMgm::extPath('imagecycle').'pi1/class.tx_imagecycle_pi1.ph
  */
 class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 {
-	var $prefixId      = 'tx_jfspacegallery_pi1';
-	var $scriptRelPath = 'pi1/class.tx_jfspacegallery_pi1.php';
-	var $extKey        = 'jfspacegallery';
-	var $pi_checkCHash = true;
+	public $prefixId      = 'tx_jfspacegallery_pi1';
+	public $scriptRelPath = 'pi1/class.tx_jfspacegallery_pi1.php';
+	public $extKey        = 'jfspacegallery';
+	public $pi_checkCHash = true;
 
 	/**
 	 * The main method of the PlugIn
@@ -50,7 +50,7 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 	 * @param	array		$conf: The PlugIn configuration
 	 * @return	The content that is displayed on the website
 	 */
-	function main($content, $conf)
+	public function main($content, $conf)
 	{
 		$this->conf = $conf;
 		$this->pi_setPiVarDefaults();
@@ -124,11 +124,28 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 		$data = array();
 		foreach ($this->images as $key => $image) {
 			$data[$key]['image']   = $image;
-			$data[$key]['href']    = $this->hrefs[$key];
-			$data[$key]['caption'] = ($this->conf['showcaption'] ? $this->captions[$key] : '');
+			$data[$key]['caption'] = $this->captions[$key];
 		}
 
-		return $this->parseTemplate($data);
+		return $this->pi_wrapInBaseClass($this->parseTemplate($data));
+	}
+
+	/**
+	 * Set the contentKey
+	 * @param string $contentKey
+	 */
+	public function setContentKey($contentKey=null)
+	{
+		$this->contentKey = ($contentKey == null ? $this->extKey : $contentKey);
+	}
+
+	/**
+	 * Get the contentKey
+	 * @return string
+	 */
+	public function getContentKey()
+	{
+		return $this->contentKey;
 	}
 
 	/**
@@ -136,7 +153,7 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 	 * @param $data
 	 * @return string
 	 */
-	function parseTemplate($data=array(), $dir='', $onlyJS=false)
+	public function parseTemplate($data=array(), $dir='', $onlyJS=false)
 	{
 		// define the directory of images
 		if ($dir == '') {
@@ -221,41 +238,25 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 
 		$return_string = null;
 		$images = null;
-		$pager = null;
 		$GLOBALS['TSFE']->register['key'] = $this->contentKey;
 		$GLOBALS['TSFE']->register['imagewidth']  = $this->conf['imagewidth'];
 		$GLOBALS['TSFE']->register['imageheight'] = $this->conf['imageheight'];
-		$GLOBALS['TSFE']->register['showcaption'] = $this->conf['showcaption'];
 		$GLOBALS['TSFE']->register['IMAGE_NUM_CURRENT'] = 0;
 		if (count($data) > 0) {
 			foreach ($data as $key => $item) {
 				$image = null;
 				$imgConf = $this->conf['cycle.'][$this->type.'.']['image.'];
 				$totalImagePath = $dir . $item['image'];
-				$GLOBALS['TSFE']->register['file']    = $totalImagePath;
-				$GLOBALS['TSFE']->register['href']    = $item['href'];
-				$GLOBALS['TSFE']->register['caption'] = $item['caption'];
+				$GLOBALS['TSFE']->register['file']       = $totalImagePath;
+				$GLOBALS['TSFE']->register['caption']    = $item['caption'];
 				$GLOBALS['TSFE']->register['CURRENT_ID'] = $GLOBALS['TSFE']->register['IMAGE_NUM_CURRENT'] + 1;
-				if ($this->hrefs[$key]) {
-					$imgConf['imageLinkWrap.'] = $imgConf['imageHrefWrap.'];
-				}
 				$image = $this->cObj->IMAGE($imgConf);
-				$image = $this->cObj->typolink($image, $imgConf['imageLinkWrap.']);
-				if ($item['caption'] && $this->conf['showcaption']) {
-					$image = $this->cObj->stdWrap($image, $this->conf['cycle.'][$this->type.'.']['captionWrap.']);
-				}
-				$image = $this->cObj->stdWrap($image, $this->conf['cycle.'][$this->type.'.']['itemWrap.']);
-				$images .= $image;
-				// create the pager
-				if ($this->conf['showPager']) {
-					$pager .= trim($this->cObj->cObjGetSingle($this->conf['cycle.'][$this->type.'.']['pager'], $this->conf['cycle.'][$this->type.'.']['pager.']));
-				}
+				$wrap = $this->cObj->stdWrap($image, $this->conf['cycle.'][$this->type.'.']['itemWrap.']);
+				$images .= $wrap;
 				$GLOBALS['TSFE']->register['IMAGE_NUM_CURRENT'] ++;
 			}
-			$markerArray['PAGER'] = $this->cObj->stdWrap($pager, $this->conf['cycle.'][$this->type.'.']['pagerWrap.']);
 			// the stdWrap
-			$images = $this->cObj->stdWrap($images, $this->conf['cycle.'][$this->type.'.']['stdWrap.']);
-			$return_string = $this->cObj->substituteMarkerArray($images, $markerArray, '###|###', 0);
+			$return_string = $this->cObj->stdWrap($images, $this->conf['cycle.'][$this->type.'.']['stdWrap.']);
 		}
 		return $return_string;
 	}

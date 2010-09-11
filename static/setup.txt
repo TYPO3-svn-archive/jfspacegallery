@@ -21,8 +21,9 @@ plugin.tx_jfspacegallery_pi1 {
 	minScale = {$plugin.tx_jfspacegallery_pi1.minScale}
 	loadingClass = {$plugin.tx_jfspacegallery_pi1.loadingClass}
 
+	options = {$plugin.tx_jfspacegallery_pi1.options}
+
 	damCaptionFields = {$plugin.tx_jfspacegallery_pi1.damCaptionFields}
-	damHrefFields = {$plugin.tx_jfspacegallery_pi1.damHrefFields}
 
 	cycle {
 		normal {
@@ -37,6 +38,7 @@ plugin.tx_jfspacegallery_pi1 {
 				titleText < .altText
 				longdescURL < .altText
 			}
+			itemWrap >
 			stdWrap {
 				dataWrap = <div id="{register:key}" class="spacegallery"> | </div>
 				required = 1

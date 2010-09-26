@@ -6,14 +6,20 @@ plugin.tx_jfspacegallery_pi1 {
 	# cat=plugin.tx_jfspacegallery.basic/enable/020; type=options[_self,_new,_top,_parent]; label=External linktarget:The target where external links will be opend
 	extlinkTarget = _new
 
-	# cat=plugin.tx_jfspacegallery.basic/enable/080; type=boolean; label=jQuery noConflict: Use the noConflict methode
+	# cat=plugin.tx_jfspacegallery.basic/enable/030; type=boolean; label=jQuery noConflict: Use the noConflict methode
 	jQueryNoConflict = 0
 
-	# cat=plugin.tx_jfspacegallery.basic/enable/090; type=boolean; label=Javascript in Footer: If set, the Javascript will be rendered in Footer
+	# cat=plugin.tx_jfspacegallery.basic/enable/040; type=boolean; label=Javascript in Footer: If set, the Javascript will be rendered in Footer
 	jsInFooter = 0
 
-	# cat=plugin.tx_jfspacegallery.basic/enable/100; type=boolean; label=Minify Javascript: If set, the Javascript will be minified
+	# cat=plugin.tx_jfspacegallery.basic/enable/050; type=boolean; label=Minify Javascript: If set, the Javascript will be minified
 	jsMinify = 0
+
+	# cat=plugin.tx_jfspacegallery.basic/enable/060; type=boolean; label=Javascript to Inline: If set, the Javascript will be inserted into the inlineJS, after this, its possible to put it into externel files (config.removeDefaultJS = external)
+	jsInline = 0
+
+	# cat=plugin.tx_jfspacegallery.basic/enable/070; type=boolean; label=Minify CSS: If set, the CSS will be minified
+	cssMinify = 0
 
 
 

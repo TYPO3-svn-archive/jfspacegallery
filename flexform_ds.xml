@@ -115,7 +115,7 @@
 								<type>input</type>
 								<size>6</size>
 								<max>6</max>
-								<eval>string</eval>
+								<eval>nospace</eval>
 							</config>
 						</TCEforms>
 					</imagewidth>
@@ -126,7 +126,7 @@
 								<type>input</type>
 								<size>6</size>
 								<max>6</max>
-								<eval>string</eval>
+								<eval>nospace</eval>
 							</config>
 						</TCEforms>
 					</imageheight>
@@ -137,7 +137,8 @@
 								<type>input</type>
 								<size>6</size>
 								<max>6</max>
-								<eval>integer</eval>
+								<checkbox>0</checkbox>
+								<eval>int</eval>
 							</config>
 						</TCEforms>
 					</border>
@@ -148,7 +149,8 @@
 								<type>input</type>
 								<size>6</size>
 								<max>6</max>
-								<eval>integer</eval>
+								<checkbox>0</checkbox>
+								<eval>int</eval>
 							</config>
 						</TCEforms>
 					</duration>
@@ -159,7 +161,8 @@
 								<type>input</type>
 								<size>6</size>
 								<max>6</max>
-								<eval>integer</eval>
+								<checkbox>0</checkbox>
+								<eval>int</eval>
 							</config>
 						</TCEforms>
 					</perspective>
@@ -167,10 +170,15 @@
 						<TCEforms>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.minScale</label>
 							<config>
-								<type>input</type>
-								<size>6</size>
-								<max>6</max>
-								<eval>string</eval>
+								<form_type>user</form_type>
+								<userFunc><![CDATA[EXT:jftcaforms/lib/class.tx_jftcaforms_tceFunc.php:&tx_jftcaforms_tceFunc->getExtSlider]]></userFunc>
+								<width>300</width>
+								<range>
+									<lower>0</lower>
+									<upper>1</upper>
+								</range>
+								<decimalPrecision>2</decimalPrecision>
+								<emptyValue>1</emptyValue>
 							</config>
 						</TCEforms>
 					</minScale>
@@ -181,7 +189,7 @@
 								<type>input</type>
 								<size>6</size>
 								<max>6</max>
-								<eval>string</eval>
+								<eval>nospace</eval>
 							</config>
 						</TCEforms>
 					</loadingClass>

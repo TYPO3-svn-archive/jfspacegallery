@@ -112,7 +112,7 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 			if ($this->lConf['perspective']) {
 				$this->conf['perspective'] = $this->lConf['perspective'];
 			}
-			if ($this->lConf['minScale']) {
+			if (is_numeric($this->lConf['minScale'])) {
 				$this->conf['minScale'] = $this->lConf['minScale'];
 			}
 			if ($this->lConf['loadingClass']) {
@@ -194,7 +194,7 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 		if ($this->conf['perspective']) {
 			$options['perspective'] = "perspective: {$this->conf['perspective']}";
 		}
-		if ($this->conf['minScale']) {
+		if (is_numeric($this->conf['minScale'])) {
 			$options['minScale'] = "minScale: {$this->conf['minScale']}";
 		}
 		if ($this->conf['loadingClass']) {

@@ -110,6 +110,7 @@
 				<el>
 					<imagewidth>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.imagewidth</label>
 							<config>
 								<type>input</type>
@@ -121,6 +122,7 @@
 					</imagewidth>
 					<imageheight>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.imageheight</label>
 							<config>
 								<type>input</type>
@@ -132,6 +134,7 @@
 					</imageheight>
 					<border>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.border</label>
 							<config>
 								<type>input</type>
@@ -144,6 +147,7 @@
 					</border>
 					<duration>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.duration</label>
 							<config>
 								<type>input</type>
@@ -156,6 +160,7 @@
 					</duration>
 					<perspective>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.perspective</label>
 							<config>
 								<type>input</type>
@@ -168,6 +173,7 @@
 					</perspective>
 					<minScale>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.minScale</label>
 							<config>
 								<form_type>user</form_type>
@@ -184,6 +190,7 @@
 					</minScale>
 					<loadingClass>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.loadingClass</label>
 							<config>
 								<type>input</type>
@@ -205,6 +212,7 @@
 				<el>
 					<options>
 						<TCEforms>
+							<exclude>1</exclude>
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.options</label>
 							<config>
 								<type>text</type>

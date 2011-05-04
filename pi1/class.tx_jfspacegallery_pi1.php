@@ -64,17 +64,24 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 
 		if ($this->cObj->data['list_type'] == $this->extKey.'_pi1') {
 			$this->type = 'normal';
+
 			// It's a content, al data from flexform
-			// Set the Flexform information
-			$this->pi_initPIflexForm();
-			$piFlexForm = $this->cObj->data['pi_flexform'];
-			foreach ($piFlexForm['data'] as $sheet => $data) {
-				foreach ($data as $lang => $value) {
-					foreach ($value as $key => $val) {
-						$this->lConf[$key] = $this->pi_getFFvalue($piFlexForm, $key, $sheet);
-					}
-				}
-			}
+
+			$this->lConf['mode']          = $this->getFlexformData('general', 'mode');
+			$this->lConf['images']        = $this->getFlexformData('general', 'images', ($this->lConf['mode'] == 'upload'));
+			$this->lConf['captions']      = $this->getFlexformData('general', 'captions', ($this->lConf['mode'] == 'upload'));
+			$this->lConf['damimages']     = $this->getFlexformData('general', 'damimages', ($this->lConf['mode'] == 'dam'));
+			$this->lConf['damcategories'] = $this->getFlexformData('general', 'damcategories', ($this->lConf['mode'] == 'dam_catedit'));
+
+			$this->lConf['imagewidth'] = $this->getFlexformData('settings', 'imagewidth');
+			$this->lConf['imageheight'] = $this->getFlexformData('settings', 'imageheight');
+			$this->lConf['border'] = $this->getFlexformData('settings', 'border');
+			$this->lConf['duration'] = $this->getFlexformData('settings', 'duration');
+			$this->lConf['perspective'] = $this->getFlexformData('settings', 'perspective');
+			$this->lConf['minScale'] = $this->getFlexformData('settings', 'minScale');
+			$this->lConf['loadingClass'] = $this->getFlexformData('settings', 'loadingClass');
+
+			$this->lConf['options'] = $this->getFlexformData('special', 'options');
 
 			// define the key of the element
 			$this->contentKey .= "_c" . $this->cObj->data['uid'];

@@ -3,7 +3,7 @@
 ########################################################################
 # Extension Manager/Repository config file for ext "jfspacegallery".
 #
-# Auto generated 04-05-2011 23:02
+# Auto generated 03-08-2011 21:01
 #
 # Manual updates:
 # Only the data in the array - everything else is removed by next
@@ -29,13 +29,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'clearCacheOnLoad' => 1,
 	'lockType' => '',
 	'author_company' => '',
-	'version' => '0.2.2',
+	'version' => '0.2.3',
 	'constraints' => array(
 		'depends' => array(
 			'cms' => '',
-			'php' => '5.0.0-5.3.99',
-			'typo3' => '4.3.0-4.5.99',
-			'imagecycle' => '2.0.2',
+			'php' => '5.0.0-0.0.0',
+			'typo3' => '4.3.0-4.99.999',
+			'imagecycle' => '2.0.2-',
 			'jftcaforms' => '',
 		),
 		'conflicts' => array(
@@ -43,7 +43,7 @@ $EM_CONF[$_EXTKEY] = array(
 		'suggests' => array(
 		),
 	),
-	'_md5_values_when_last_written' => 'a:22:{s:12:"ext_icon.gif";s:4:"d070";s:17:"ext_localconf.php";s:4:"d320";s:14:"ext_tables.php";s:4:"e2e1";s:15:"flexform_ds.xml";s:4:"6594";s:13:"locallang.xml";s:4:"8b48";s:16:"locallang_db.xml";s:4:"3049";s:12:"t3jquery.txt";s:4:"4bc6";s:14:"doc/manual.sxw";s:4:"4006";s:42:"lib/class.tx_jfspacegallery_cms_layout.php";s:4:"6012";s:14:"pi1/ce_wiz.gif";s:4:"2d0e";s:35:"pi1/class.tx_jfspacegallery_pi1.php";s:4:"f3d3";s:43:"pi1/class.tx_jfspacegallery_pi1_wizicon.php";s:4:"4067";s:17:"pi1/locallang.xml";s:4:"e8a5";s:28:"res/tx_jfspacegallery_pi1.js";s:4:"bf01";s:17:"res/css/style.css";s:4:"452f";s:22:"res/img/ajax_small.gif";s:4:"c02b";s:17:"res/img/blank.gif";s:4:"5639";s:33:"res/jquery/js/jquery-1.5.2.min.js";s:4:"e85a";s:34:"res/jquery/js/jquery.easing-1.3.js";s:4:"6516";s:36:"res/jquery/js/jquery.spacegallery.js";s:4:"cb77";s:20:"static/constants.txt";s:4:"71b5";s:16:"static/setup.txt";s:4:"9b1d";}',
+	'_md5_values_when_last_written' => 'a:22:{s:12:"ext_icon.gif";s:4:"d070";s:17:"ext_localconf.php";s:4:"d320";s:14:"ext_tables.php";s:4:"e2e1";s:15:"flexform_ds.xml";s:4:"d51a";s:13:"locallang.xml";s:4:"8b48";s:16:"locallang_db.xml";s:4:"3049";s:12:"t3jquery.txt";s:4:"4bc6";s:14:"doc/manual.sxw";s:4:"cceb";s:42:"lib/class.tx_jfspacegallery_cms_layout.php";s:4:"6012";s:14:"pi1/ce_wiz.gif";s:4:"2d0e";s:35:"pi1/class.tx_jfspacegallery_pi1.php";s:4:"f3d3";s:43:"pi1/class.tx_jfspacegallery_pi1_wizicon.php";s:4:"4067";s:17:"pi1/locallang.xml";s:4:"e8a5";s:28:"res/tx_jfspacegallery_pi1.js";s:4:"bf01";s:17:"res/css/style.css";s:4:"5726";s:22:"res/img/ajax_small.gif";s:4:"c02b";s:17:"res/img/blank.gif";s:4:"5639";s:33:"res/jquery/js/jquery-1.6.2.min.js";s:4:"a1a8";s:34:"res/jquery/js/jquery.easing-1.3.js";s:4:"6516";s:36:"res/jquery/js/jquery.spacegallery.js";s:4:"f8bc";s:20:"static/constants.txt";s:4:"7231";s:16:"static/setup.txt";s:4:"9b1d";}',
 	'suggests' => array(
 	),
 );

@@ -162,6 +162,9 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 	 */
 	public function parseTemplate($data=array(), $dir='', $onlyJS=false)
 	{
+		$this->pagerenderer = t3lib_div::makeInstance('tx_imagecycle_pagerenderer');
+		$this->pagerenderer->setConf($this->conf);
+
 		// define the directory of images
 		if ($dir == '') {
 			$dir = $this->imageDir;
@@ -214,10 +217,10 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 		}
 
 		// define the js file
-		$this->addJsFile($this->conf['jQueryCycle']);
+		$this->pagerenderer->addJsFile($this->conf['jQueryCycle']);
 
 		// define the css file
-		$this->addCssFile($this->conf['cssFile']);
+		$this->pagerenderer->addCssFile($this->conf['cssFile']);
 
 		// The template for JS
 		if (! $this->templateFileJS = $this->cObj->fileResource($this->conf['templateFileJS'])) {
@@ -234,10 +237,10 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 		// set the markers
 		$templateCode = $this->cObj->substituteMarkerArray($templateCode, $markerArray, '###|###', 0);
 
-		$this->addJS($jQueryNoConflict . $templateCode);
+		$this->pagerenderer->addJS($jQueryNoConflict . $templateCode);
 
 		// Add the ressources
-		$this->addResources();
+		$this->pagerenderer->addResources();
 
 		if ($onlyJS === true) {
 			return true;

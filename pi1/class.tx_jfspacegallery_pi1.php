@@ -239,6 +239,13 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 
 		$this->pagerenderer->addJS($jQueryNoConflict . $templateCode);
 
+		// checks if t3jquery is loaded
+		if (T3JQUERY === true) {
+			tx_t3jquery::addJqJS();
+		} else {
+			$this->pagerenderer->addJsFile($this->conf['jQueryLibrary'], true);
+		}
+
 		// Add the ressources
 		$this->pagerenderer->addResources();
 

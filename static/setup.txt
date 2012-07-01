@@ -27,6 +27,13 @@ plugin.tx_jfspacegallery_pi1 {
 
 	damCaptionFields = {$plugin.tx_jfspacegallery_pi1.damCaptionFields}
 
+	integerWidthWrap {
+		wrap = |
+	}
+	integerHeightWrap {
+		wrap = |
+	}
+
 	cycle {
 		normal {
 			image {

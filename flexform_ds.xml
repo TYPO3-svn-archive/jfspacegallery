@@ -114,8 +114,8 @@
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.imagewidth</label>
 							<config>
 								<type>input</type>
-								<size>6</size>
-								<max>6</max>
+								<size>16</size>
+								<max>16</max>
 								<eval>nospace</eval>
 							</config>
 						</TCEforms>
@@ -126,8 +126,8 @@
 							<label>LLL:EXT:jfspacegallery/locallang_db.xml:tt_content.pi_flexform.imageheight</label>
 							<config>
 								<type>input</type>
-								<size>6</size>
-								<max>6</max>
+								<size>16</size>
+								<max>16</max>
 								<eval>nospace</eval>
 							</config>
 						</TCEforms>

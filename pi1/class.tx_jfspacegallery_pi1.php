@@ -195,6 +195,15 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 		if (! $this->conf['imageheight']) {
 			$this->conf['imageheight'] = ($this->conf['imageheight'] ? $this->conf['imageheight'] : "200c");
 		}
+
+		// wrap if integer
+		if (is_numeric($this->conf['imagewidth'])) {
+			$this->conf['imagewidth'] = $this->cObj->stdWrap($this->conf['imagewidth'], $this->conf['integerWidthWrap.']);
+		}
+		if (is_numeric($this->conf['imageheight'])) {
+			$this->conf['imageheight'] = $this->cObj->stdWrap($this->conf['imageheight'], $this->conf['integerHeightWrap.']);
+		}
+
 		if ($this->conf['border']) {
 			$options['border'] = "border: {$this->conf['border']}";
 		}

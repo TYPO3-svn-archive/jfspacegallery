@@ -67,11 +67,11 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 
 			// It's a content, al data from flexform
 
-			$this->lConf['mode']          = $this->getFlexformData('general', 'mode');
-			$this->lConf['images']        = $this->getFlexformData('general', 'images', ($this->lConf['mode'] == 'upload'));
-			$this->lConf['captions']      = $this->getFlexformData('general', 'captions', ($this->lConf['mode'] == 'upload'));
-			$this->lConf['damimages']     = $this->getFlexformData('general', 'damimages', ($this->lConf['mode'] == 'dam'));
-			$this->lConf['damcategories'] = $this->getFlexformData('general', 'damcategories', ($this->lConf['mode'] == 'dam_catedit'));
+			$this->conf['mode']          = $this->getFlexformData('general', 'mode');
+			$this->conf['images']        = $this->getFlexformData('general', 'images', ($this->conf['mode'] == 'upload'));
+			$this->conf['captions']      = $this->getFlexformData('general', 'captions', ($this->conf['mode'] == 'upload'));
+			$this->conf['damimages']     = $this->getFlexformData('general', 'damimages', ($this->conf['mode'] == 'dam'));
+			$this->conf['damcategories'] = $this->getFlexformData('general', 'damcategories', ($this->conf['mode'] == 'dam_catedit'));
 
 			$this->lConf['imagewidth'] = $this->getFlexformData('settings', 'imagewidth');
 			$this->lConf['imageheight'] = $this->getFlexformData('settings', 'imageheight');
@@ -87,7 +87,7 @@ class tx_jfspacegallery_pi1 extends tx_imagecycle_pi1
 			$this->contentKey .= "_c" . $this->cObj->data['uid'];
 
 			// define the images
-			switch ($this->lConf['mode']) {
+			switch ($this->conf['mode']) {
 				case "" : {}
 				case "folder" : {}
 				case "upload" : {
